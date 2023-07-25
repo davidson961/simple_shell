@@ -5,4 +5,4 @@ Basics of C
 Basics of thinking like an engineer
 Group work
 and Learning how to learn
-DONE BY Ahmad Hammed & Omar Zamran
+DONE BY Adebayo Hammed & Omar Zamran
