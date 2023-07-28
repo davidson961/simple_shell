@@ -1,11 +1,11 @@
 #include "main.h"
 
 /**
- * getLength - gets length of an integer
- * @n: the integer
- * Return: The length
+ * get_len - acquires the length of int
+ * @n: this is the integer
+ * Return: the length
  */
-int getLength(int n)
+int get_len(int n)
 {
 	unsigned int num;
 	int length = 1;
@@ -24,16 +24,15 @@ int getLength(int n)
 	}
 	return (length);
 }
-
 /**
- * intToStr - converts an integer to a string.
+ * aux_itoa - the int to string.
  * @n: the integer
  * Return: the string
  */
-char *intToStr(int n)
+char *aux_itoa(int n)
 {
 	unsigned int num;
-	int length = getLength(n);
+	int length = get_len(n);
 	char *buff;
 
 	buff = malloc(sizeof(char) * (length + 1));
@@ -57,16 +56,16 @@ char *intToStr(int n)
 		;
 	return (buff);
 }
-
 /**
- * strToInt - converts a string to an integer.
- * @s: string.
- * Return: integer
+ * _atoi - the string to integer.
+ * @s: the string.
+ * Return: the integer
  */
-int strToInt(char *s)
+int _atoi(char *s)
 {
 	unsigned int counter = 0, size = 0;
-	int final = 0, sign = 1, power = 1, i;
+	int final = 0, sign = 1, power = 1;
+	unsigned int i;
 
 	while (*(s + counter) != '\0')
 	{
