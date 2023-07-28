@@ -1,9 +1,9 @@
 #include "main.h"
 
 /**
- * err_get - executes the error according to the permission, syntax, or builtin
+ * err_get - executes the error according to the permission, syntax or builtin
  * @datash: shell info
- * @eval: value of the error
+ * @eval: value of errror
  * Return: err
  */
 int err_get(data_shell *datash, int eval)
@@ -13,19 +13,19 @@ int err_get(data_shell *datash, int eval)
 	switch (eval)
 	{
 	case -1:
-		err = envErr(datash);
+		err = env_err(datash);
 		break;
 	case 126:
-		err = pathDeniedErr(datash);
+		err = path_denied_err(datash);
 		break;
 	case 127:
-		err = notFoundErr(datash);
+		err = not_found_err(datash);
 		break;
 	case 2:
 		if (_strcmp("exit", datash->args[0]) == 0)
-			err = exitShellErr(datash);
+			err = exit_shell_err(datash);
 		else if (_strcmp("cd", datash->args[0]) == 0)
-			err = getCdErr(datash);
+			err = get_cd_err(datash);
 		break;
 	}
 
