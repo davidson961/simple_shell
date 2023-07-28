@@ -1,21 +1,40 @@
 #include "main.h"
 
 /**
- * execute_line - gets commands and builtins
+ * err_get - executes the error according to the permission, syntax or builtin
  * @datash: shell info
- * Return: 1 if successful, otherwise returns the result of the command execution.
+ * @eval: value of errror
+ * Return: err
  */
-int execute_line(data_shell *datash)
+int err_get(data_shell *datash, int eval)
 {
-	int (*built_in)(data_shell *datash);
+	char *err;
 
-	if (datash->args[0] == NULL)
-		return (1);
+	switch (eval)
+	{
+	case -1:
+		err = env_err(datash);
+		break;
+	case 126:
+		err = path_denied_err(datash);
+		break;
+	case 127:
+		err = not_found_err(datash);
+		break;
+	case 2:
+		if (_strcmp("exit", datash->args[0]) == 0)
+			err = exit_shell_err(datash);
+		else if (_strcmp("cd", datash->args[0]) == 0)
+			err = get_cd_err(datash);
+		break;
+	}
 
-	built_in = get_built_in(datash->args[0]);
+	if (err)
+	{
+		write(STDERR_FILENO, err, _strlen(err));
+		free(err);
+	}
 
-	if (built_in != NULL)
-		return (built_in(datash));
-
-	return (exe_cmd(datash));
+	datash->status = eval;
+	return (eval);
 }
