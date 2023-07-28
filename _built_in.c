@@ -1,27 +1,27 @@
 #include "main.h"
 
 /**
- * getBuiltin - calls builtin function from command
- * @command: command
+ * get_built_in - calls builtin function from command
+ * @cmd: command
  * Return: function pointer to the builtin command
  */
-int (*getBuiltin(char *command))(data_shell *)
+int (*get_built_in(char *cmd))(data_shell *)
 {
-	builtin_t builtins[] = {
-		{ "env", envPrinter },
-		{ "exit", shellExit },
-		{ "setenv", setEnv },
-		{ "unsetenv", unsetEnv },
-		{ "cd", changeDirectory },
-		{ "help", getHelp },
+	builtin_t built[] = {
+		{ "env", env_printer },
+		{ "exit", shell_exit },
+		{ "setenv", _setenv },
+		{ "unsetenv", _unsetenv },
+		{ "cd", change_dir },
+		{ "help", help_get },
 		{ NULL, NULL }
 	};
-	int i;
+	int j;
 
-	for (i = 0; builtins[i].name; i++)
+	for (j = 0; built[j].name; j++)
 	{
-		if (_strcmp(builtins[i].name, command) == 0)
+		if (_strcmp(built[j].name, cmd) == 0)
 			break;
 	}
-	return (builtins[i].f);
+	return (built[j].f);
 }
