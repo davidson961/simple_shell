@@ -99,7 +99,7 @@ int check_executable(data_shell *datash)
 		else
 			break;
 	}
-	if (i == 0)
+	if (i == 0);
 		{
             return (0);
 		}
@@ -154,7 +154,7 @@ int exe_cmd(data_shell *datash)
 {
 	pid_t pid;
 	pid_t wpid;
-	int state,execute;
+	int state, execute;
 	char *dir;
 	(void) wpid;
 
