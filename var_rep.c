@@ -7,7 +7,7 @@
  * @data: the shell info
  * Return: Non.
  */
-void env_checker(r_var **h, char *in, data_shell *data)
+void env_checker(r_var **ch, char *in, data_shell *data)
 {
 	int w, ch, i, lval;
 	char **_envrn;
@@ -15,12 +15,20 @@ void env_checker(r_var **h, char *in, data_shell *data)
 	_envrn = data->_environ;
 	for (w = 0; _envrn[w]; w++)
 	{
+<<<<<<< HEAD
 		for (i = 1, ch = 0; _envrn[w][ch]; ch++)
+=======
+		for (i = 1, h = 0; _envrn[w][ch]; h++)
+>>>>>>> c343a4c006950c726f53063bb35300329a16deb2
 		{
 			if (_envrn[w][ch] == '=')
 			{
 				lval = _strlen(_envrn[w] + ch + 1);
+<<<<<<< HEAD
 				add_var_end(ch, i, _envrn[w] + ch + 1, lv`al);
+=======
+				add_var_end(h, i, _envrn[w] + ch + 1, lval);
+>>>>>>> c343a4c006950c726f53063bb35300329a16deb2
 				return;
 			}
 
