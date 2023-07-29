@@ -1,38 +1,30 @@
 #include "main.h"
 
 /**
- * env_checker - This checks if the variable is an env variable
- * @h: the head of list
- * @in: the input
- * @data: the shell info
+ * env_checker - this checks if the variable is an env variable
+ * @h: this is the head of list
+ * @in: this is the input
+ * @data: this is the shell info
  * Return: Non.
  */
-void env_checker(r_var **ch, char *in, data_shell *data)
+void env_checker(r_var **h, char *in, data_shell *data)
 {
-	int w, ch, i, lval;
+	int rw, ch, i, lval;
 	char **_envrn;
 
 	_envrn = data->_environ;
-	for (w = 0; _envrn[w]; w++)
+	for (rw = 0; _envrn[rw]; rw++)
 	{
-<<<<<<< HEAD
-		for (i = 1, ch = 0; _envrn[w][ch]; ch++)
-=======
-		for (i = 1, h = 0; _envrn[w][ch]; h++)
->>>>>>> c343a4c006950c726f53063bb35300329a16deb2
+		for (i = 1, ch = 0; _envrn[rw][ch]; ch++)
 		{
-			if (_envrn[w][ch] == '=')
+			if (_envrn[rw][ch] == '=')
 			{
-				lval = _strlen(_envrn[w] + ch + 1);
-<<<<<<< HEAD
-				add_var_end(ch, i, _envrn[w] + ch + 1, lv`al);
-=======
-				add_var_end(h, i, _envrn[w] + ch + 1, lval);
->>>>>>> c343a4c006950c726f53063bb35300329a16deb2
+				lval = _strlen(_envrn[rw] + ch + 1);
+				add_var_end(h, i, _envrn[rw] + ch + 1, lval);
 				return;
 			}
 
-			if (in[i] == _envrn[w][ch])
+			if (in[i] == _envrn[rw][ch])
 				i++;
 			else
 				break;
@@ -44,15 +36,15 @@ void env_checker(r_var **ch, char *in, data_shell *data)
 			break;
 	}
 
-	add_var_end(ch, i, NULL, 0);
+	add_var_end(h, i, NULL, 0);
 }
 
 /**
  * var_checker - this checks if the typed variable is either $$ or $.
- * @h: the head of the list
- * @in: the input.
- * @st: the status of shell
- * @data: the shell info
+ * @h: this is the head of the list
+ * @in: this is the input.
+ * @st: this is the status of shell
+ * @data: this is the shell info
  * Return: Non.
  */
 int var_checker(r_var **h, char *in, char *st, data_shell *data)
@@ -87,32 +79,32 @@ int var_checker(r_var **h, char *in, char *st, data_shell *data)
 }
 
 /**
- * var_input -this changes the input string into variables
- * @head: the head of the list
- * @input: the input
- * @new_input: the replaced string
+ * var_input - this changes the input string into variables
+ * @head: this is the head of the list
+ * @input: this is the input
+ * @new_input: this is a replaced string
  * @nlen: new length
  * Return: new replaced string
  */
 char *var_input(r_var **head, char *input, char *new_input, int nlen)
 {
 	r_var *ind;
-	int i, g, k;
+	int i, j, k;
 
 	ind = *head;
-	for (g = i = 0; i < nlen; i++)
+	for (j = i = 0; i < nlen; i++)
 	{
-		if (input[g] == '$')
+		if (input[j] == '$')
 		{
 			if (!(ind->len_var) && !(ind->len_val))
 			{
-				new_input[i] = input[g];
-				g++;
+				new_input[i] = input[j];
+				j++;
 			}
 			else if (ind->len_var && !(ind->len_val))
 			{
 				for (k = 0; k < ind->len_var; k++)
-					g++;
+					j++;
 				i--;
 			}
 			else
@@ -122,25 +114,25 @@ char *var_input(r_var **head, char *input, char *new_input, int nlen)
 					new_input[i] = ind->val[k];
 					i++;
 				}
-				g += (ind->len_var);
+				j += (ind->len_var);
 				i--;
 			}
 			ind = ind->next;
 		}
 		else
 		{
-			new_input[i] = input[g];
-			g++;
+			new_input[i] = input[j];
+			j++;
 		}
 	}
 	return (new_input);
 }
 
 /**
- * replace_var replaced string into vars
- * @input: the input
- * @datash: the shell info
- * Return: replaced string
+ * replace_var -this is a replaced string into vars
+ * @input: this is an input
+ * @datash: this is the shell info
+ * Return: this is a replaced string
  */
 char *replace_var(char *input, data_shell *datash)
 {
