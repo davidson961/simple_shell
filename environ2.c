@@ -48,7 +48,7 @@ void environ_set(char *name, char *value, data_shell *datash)
 		free(var_environ);
 	}
 	datash->_environ = _reallocdp(datash->_environ, u, sizeof(char *) * (u + 2));
-	datash->_environ[i] = info_cp(name, value);
+	datash->_environ[u] = info_cp(name, value);
 	datash->_environ[u + 1] = NULL;
 }
 
