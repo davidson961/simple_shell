@@ -117,7 +117,7 @@ char *exit_shell_err(data_shell *datash)
 	if (err == 0)
 	{
 		free(str_var);
-		return (NULL)
+		return (NULL);
 	}
 	_strcpy(err, datash->av[0]);
 	_strcat(err, ": ");
