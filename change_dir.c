@@ -111,7 +111,7 @@ void cd_prev(data_shell *datash)
 
 /**
  * cd_home - move to home
- * @@datash: shell info
+ * @datash: shell info
  * Return: Non
  */
 void cd_home(data_shell *datash)

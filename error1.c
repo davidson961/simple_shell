@@ -102,7 +102,7 @@ char *not_found_err(data_shell *datash)
 
 /**
  * exit_shell_err - generic error message for exit in get_exit
- @datash: data from current shell
+ * @datash: data from current shell
  * Return: Full error message
  */
 char *exit_shell_err(data_shell *datash)
