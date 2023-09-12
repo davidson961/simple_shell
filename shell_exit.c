@@ -8,7 +8,7 @@
 int shell_exit(data_shell *datash)
 {
 	unsigned int _status;
-	int check_digit,str_length,big_num;
+	int check_digit, str_length, big_num;
 
 	if (datash->args[1] != NULL)
 	{

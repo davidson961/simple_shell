@@ -18,7 +18,7 @@ int help_get(data_shell *datash)
 	else if (_strcmp(datash->args[1], "help") == 0)
 		_help();
 	else if (_strcmp(datash->args[1], "exit") == 0)
-        _help_exit();
+		_help_exit();
 	else if (_strcmp(datash->args[1], "cd") == 0)
 		_help_cd();
 	else if (_strcmp(datash->args[1], "alias") == 0)

@@ -2,7 +2,7 @@
 
 /**
  * env_err - env error message
- @datash: data from current shell
+ * @datash: data from current shell
  * Return: Full error message
  */
 char *env_err(data_shell *datash)
@@ -35,13 +35,13 @@ char *env_err(data_shell *datash)
 }
 /**
  * path_denied_err - path denied error message
- @datash: data from current shell
+ * @datash: data from current shell
  * Return: Full error message
  */
 char *path_denied_err(data_shell *datash)
 {
 	int len;
-	char *str_var,*err;
+	char *str_var, *err;
 
 	str_var = aux_itoa(datash->counter);
 	len = _strlen(datash->av[0]) + _strlen(str_var);

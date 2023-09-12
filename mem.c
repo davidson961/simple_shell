@@ -14,7 +14,7 @@ void _memcpy(void *newptr, const void *ptr, unsigned int size)
 	unsigned int i;
 
 	for (i = 0; i < size; i++)
-    {
+	{
 		_newptr[i] = _ptr[i];
 	}
 }
@@ -71,9 +71,9 @@ char **_reallocdp(char **ptr, unsigned int old_size, unsigned int new_size)
 	if (new_ptr == NULL)
 		return (NULL);
 	for (i = 0; i < old_size; i++)
-    {
-        new_ptr[i] = ptr[i];
-    }
+	{
+		new_ptr[i] = ptr[i];
+	}
 	free(ptr);
 	return (new_ptr);
 }

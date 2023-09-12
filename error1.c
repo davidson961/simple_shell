@@ -28,7 +28,7 @@ char *cd_strcat(data_shell *datash, char *message, char *err, char *str_var)
 		free(illegal_f);
 	}
 	else
-    _strcat(err, datash->args[1]);
+		_strcat(err, datash->args[1]);
 	_strcat(err, "\n");
 	_strcat(err, "\0");
 	return (err);
@@ -42,7 +42,7 @@ char *cd_strcat(data_shell *datash, char *message, char *err, char *str_var)
 char *get_cd_err(data_shell *datash)
 {
 	int len, l_id;
-	char *err,*str_var;
+	char *err, *str_var;
 	char *message;
 
 	str_var = aux_itoa(datash->counter);
@@ -77,7 +77,7 @@ char *get_cd_err(data_shell *datash)
 char *not_found_err(data_shell *datash)
 {
 	int len;
-	char *err,*str_var;
+	char *err, *str_var;
 
 	str_var = aux_itoa(datash->counter);
 	len = _strlen(datash->av[0]) + _strlen(str_var);
@@ -108,7 +108,7 @@ char *not_found_err(data_shell *datash)
 char *exit_shell_err(data_shell *datash)
 {
 	int len;
-	char *err,*str_var;
+	char *err, *str_var;
 
 	str_var = aux_itoa(datash->counter);
 	len = _strlen(datash->av[0]) + _strlen(str_var);

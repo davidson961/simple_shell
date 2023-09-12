@@ -161,6 +161,6 @@ char *replace_var(char *input, data_shell *datash)
 	n_input = var_input(&h, input, n_input, nlen);
 	free(input);
 	free(st);
-    var_list_free(&h);
+	var_list_free(&h);
 	return (n_input);
 }

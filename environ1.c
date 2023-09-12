@@ -9,6 +9,7 @@
 int comp_env_names(const char *nenv, const char *name)
 {
 	int i;
+
 	for (i = 0; nenv[i] != '='; i++)
 	{
 		if (nenv[i] != name[i])
@@ -28,6 +29,7 @@ char *_getenv(const char *name, char **_environ)
 	char *env_ptr;
 	int i;
 	int checker = 0;
+
 	env_ptr = NULL;
 
 	for (i = 0; _environ[i]; i++)

@@ -67,11 +67,13 @@ void add_nodes(sep_list **head_s, line_list **head_l, char *input)
 		}
 	}
 	line_ptr = _strtok(input, ";|&");
-	do{
+	do {
 		line_ptr = char_swap(line_ptr, 1);
 		add_line_end(head_l, line_ptr);
 		line_ptr = _strtok(NULL, ";|&");
-	} while (line_ptr != NULL);
+	}
+
+	while (line_ptr != NULL);
 }
 
 /**

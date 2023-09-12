@@ -78,6 +78,7 @@ int _unsetenv(data_shell *datash)
 	char **realloc_environ;
 	char *var_environ, *name_environ;
 	int i, j, a;
+
 	if (datash->args[1] == NULL)
 	{
 		err_get(datash, -1);
