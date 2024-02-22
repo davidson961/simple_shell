@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * aux_help - the help information for the builtin help.
+ * aux_help - provides help information for the built-in 'help' command.
  * Return: no return printed.
  */
 void aux_help(void)
@@ -15,7 +15,7 @@ void aux_help(void)
 	write(STDOUT_FILENO, help, _strlen(help));
 }
 /**
- * aux_help_alias - the help information for the builtin alias.
+ * aux_help_alias - provides help information for the built-in 'alias' command.
  * Return: no return printed.
  */
 void aux_help_alias(void)
@@ -27,7 +27,7 @@ void aux_help_alias(void)
 	write(STDOUT_FILENO, help, _strlen(help));
 }
 /**
- * aux_help_cd - the help information for the builtin alias.
+ * aux_help_cd - provides help information for the built-in 'cd' command.
  * Return: no return printed.
  */
 void aux_help_cd(void)
