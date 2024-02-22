@@ -1,8 +1,8 @@
 #include "main.h"
 
 /**
- * add_rvar_node - appends a variable at the end
- * of a r_var list.
+ * add_rvar_node - adds a variable at the end
+ * of a reverse variable list.
  * @head: the head of linked list.
  * @lvar: the length of the variable.
  * @val: the value of the variable.
@@ -39,7 +39,7 @@ r_var *add_rvar_node(r_var **head, int lvar, char *val, int lval)
 }
 
 /**
- * free_rvar_list - Allocates mem to r_var list
+ * free_rvar_list - Allocates memory to a reverse variable list
  * @head: the head of linked list.
  * Return: no return printed.
  */
