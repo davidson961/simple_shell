@@ -1,10 +1,10 @@
 #include "main.h"
 
 /**
- * add_sep_node_end - appends a separator found at the end
- * of a sep_list.
+ * add_sep_node_end - adds a separator found at the end
+ * of a separator list.
  * @head: the head of linked list.
- * @sep: the separator found (; | &).
+ * @sep: the separator encountered (; | &).
  * Return: the address of the head.
  */
 sep_list *add_sep_node_end(sep_list **head, char sep)
@@ -34,7 +34,7 @@ sep_list *add_sep_node_end(sep_list **head, char sep)
 }
 
 /**
- * free_sep_list - Allocates mem to sep_list.
+ * free_sep_list - Allocates memory for a separator list.
  * @head: the head of linked list.
  * Return: no return printed.
  */
@@ -58,7 +58,7 @@ void free_sep_list(sep_list **head)
 /**
  * add_line_node_end - appends a command line at the end
  * of a line_list.
- * @head: the head of linked list.
+ * @head: the head of the linked list.
  * @line: the command line.
  * Return: the address of the head.
  */
@@ -89,7 +89,7 @@ line_list *add_line_node_end(line_list **head, char *line)
 }
 
 /**
- * free_line_list - allocates mem to line_list.
+ * free_line_list - allocates memory to line_list.
  * @head: the head of linked list.
  * Return: no return printed.
  */
