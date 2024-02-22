@@ -2,7 +2,7 @@
 
 /**
  * aux_help_env - provides help information for the built-in 'env' command.
- * Return: No printed return.
+ * Return: no return printed.
  */
 void aux_help_env(void)
 {
@@ -15,7 +15,7 @@ void aux_help_env(void)
 }
 /**
  * aux_help_setenv - provides help information for the built-in 'setenv' command.
- * Return: No printed return.
+ * Return: no return printed.
  */
 void aux_help_setenv(void)
 {
@@ -30,7 +30,7 @@ void aux_help_setenv(void)
 }
 /**
  * aux_help_unsetenv - provides help information for the built-in 'unsetenv' command.
- * Return: No printed return.
+ * Return: no return printed.
  */
 void aux_help_unsetenv(void)
 {
@@ -44,7 +44,7 @@ void aux_help_unsetenv(void)
 
 /**
  * aux_help_general - serves as the entry point for help information related to the 'help' built-in command.
- * Return: No printed return.
+ * Return: no return printed.
  */
 void aux_help_general(void)
 {
@@ -66,7 +66,7 @@ void aux_help_general(void)
 }
 /**
  * aux_help_exit - provides help information for the built-in 'exit' command.
- * Return: No printed return.
+ * Return: no return printed.
  */
 void aux_help_exit(void)
 {
