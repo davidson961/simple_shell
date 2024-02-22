@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * _memcpy - operation consist on copies infos between void pointers.
+ * _memcpy - performs an operation that involves copying information between void pointers.
  * @newptr: the destination of a pointer.
  * @ptr: the source of a pointer.
  * @size: the size of the new pointer.
@@ -23,7 +23,7 @@ void _memcpy(void *newptr, const void *ptr, unsigned int size)
  * @old_size: the size, in bytes, of the allocated space of ptr.
  * @new_size: the new size, in bytes, of new memory block.
  * Return: ptr.
- * if new_size == old_size, returns ptr without changes.
+ * if new_size is equal to old_size, returns ptr without changes.
  * if malloc fails, returns NULL.
  */
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
@@ -61,7 +61,7 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
  * @old_size: the size, in bytes, of the allocated space of ptr.
  * @new_size: the new size, in bytes, of the new memory block.
  * Return: ptr.
- * if new_size == old_size, returns ptr without any changes.
+ * if new_size is equal to old_size, returns ptr without changes.
  * if malloc fails, returns NULL.
  */
 char **_reallocdp(char **ptr, unsigned int old_size, unsigned int new_size)
