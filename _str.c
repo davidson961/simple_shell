@@ -1,10 +1,10 @@
 #include "main.h"
 
 /**
- * _strcat - the concatenate of two strings.
- * @dest: char pointer the dest of the copied string.
- * @src: const char pointer the source of string.
- * Return: the dest.
+ * _strcat - concatenate two strings.
+ * @dest: char pointer to the destination of the copied string.
+ * @src: const char pointer to the source string.
+ * Return: the destination string.
  */
 char *_strcat(char *dest, const char *src)
 {
@@ -24,10 +24,10 @@ char *_strcat(char *dest, const char *src)
 	return (dest);
 }
 /**
- * *_strcpy - the function copies strings pointed to by source.
- * @dest: Type char pointer the dest of the copied string.
- * @src: Type char pointer the source of the string.
- * Return: the dest.
+ * *_strcpy - function that copies strings pointed to by source.
+ * @dest: Char pointer to the destination of the copied string.
+ * @src: Char pointer to the source of the string.
+ * Return: The destination string.
  */
 char *_strcpy(char *dest, char *src)
 {
@@ -43,10 +43,10 @@ char *_strcpy(char *dest, char *src)
 	return (dest);
 }
 /**
- * _strcmp - Function compares two strings.
- * @s1: type string compared.
- * @s2: type string compared.
- * Return: Succeses, Always 0.
+ * _strcmp - Function that compares two strings.
+ * @s1: String to be compared.
+ * @s2: String to be compared.
+ * Return: Success, Always 0.
  */
 int _strcmp(char *s1, char *s2)
 {
@@ -63,9 +63,9 @@ int _strcmp(char *s1, char *s2)
 }
 /**
  * _strchr - function locates a character in a string,
- * @s: the string.
- * @c: the character.
- * Return: the pointer to first occurrence of the char c.
+ * @s: The string.
+ * @c: The character.
+ * Return: Pointer to the first occurrence of the character c.
  */
 char *_strchr(char *s, char c)
 {
@@ -80,9 +80,9 @@ char *_strchr(char *s, char c)
 }
 /**
  * _strspn - function gets the length of a prefix substring.
- * @s: the initial segment.
- * @accept: the accepted bytes.
- * Return: the number of accepted bytes.
+ * @s: The initial segment.
+ * @accept: The accepted bytes.
+ * Return: The number of accepted bytes.
  */
 int _strspn(char *s, char *accept)
 {
