@@ -1,8 +1,8 @@
 #include "main.h"
 
 /**
- * get_len - gets the lenght of a number.
- * @n: the type int number.
+ * get_len - determines the lenght of a number.
+ * @n: the type integer number.
  * Return: the lenght of a number.
  */
 int get_len(int n)
@@ -28,7 +28,7 @@ int get_len(int n)
 	return (len);
 }
 /**
- * aux_itoa - the function converts int to string.
+ * aux_itoa - the function that converts the integer to string.
  * @n: the type int number.
  * Return: the string.
  */
@@ -66,7 +66,7 @@ char *aux_itoa(int n)
 }
 
 /**
- * _atoi - the function converts a string to an integer.
+ * _atoi - the function that converts a string to an integer.
  * @s: the input string.
  * Return: the integer.
  */
