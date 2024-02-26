@@ -2,8 +2,8 @@
 
 /**
  * rev_string - function reverses a string.
- * @s: the input string.
- * Return: no return printed.
+ * @s: The input string.
+ * Return: No printed return.
  */
 void rev_string(char *s)
 {
