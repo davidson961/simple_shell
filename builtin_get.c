@@ -1,4 +1,4 @@
-include "main.h"
+#include "main.h"
 
 /**
  * get_builtin - function that interprets the command in the argument.
