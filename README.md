@@ -1,1 +1,4 @@
-# simple_shell
+# simple_shell 
+By:
+Yaaichyounes
+ZAMRAN OMAR
