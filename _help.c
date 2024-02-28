@@ -14,7 +14,7 @@ void aux_help_env(void)
 
 }
 /**
- * aux_help_setenv - provides help information for the built-in 'setenv' command.
+ * aux_help_setenv - provides help information for the built-in setenv command.
  * Return: no return printed.
  */
 void aux_help_setenv(void)
@@ -29,7 +29,8 @@ void aux_help_setenv(void)
 	write(STDOUT_FILENO, help, _strlen(help));
 }
 /**
- * aux_help_unsetenv - provides help information for the built-in 'unsetenv' command.
+ * aux_help_unsetenv - provides help information for the built-in
+ * unsetenv command.
  * Return: no return printed.
  */
 void aux_help_unsetenv(void)
@@ -43,7 +44,8 @@ void aux_help_unsetenv(void)
 
 
 /**
- * aux_help_general - serves as the entry point for help information related to the 'help' built-in command.
+ * aux_help_general - serves as the entry point for help
+ * information related to the 'help' built-in command.
  * Return: no return printed.
  */
 void aux_help_general(void)

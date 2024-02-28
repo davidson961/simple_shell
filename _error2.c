@@ -1,7 +1,8 @@
 #include "main.h"
 
 /**
- * error_env - the error message associated with the env command in the get_env function.
+ * error_env - the error message associated with the env command
+ * in the get_env function.
  * @datash: relevant data (counter, arguments).
  * Return: the printed error message.
  */
@@ -36,7 +37,8 @@ char *error_env(data_shell *datash)
 	return (err);
 }
 /**
- * error_path_126 - the error message for issues related to path and permission denial.
+ * error_path_126 - the error message for issues related
+ * to path and permission denial.
  * @datash: relevant data (counter, arguments).
  * Return: The printed error string.
  */

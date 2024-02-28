@@ -38,7 +38,8 @@ char *strcat_cd(data_shell *datash, char *msg, char *error, char *ver_str)
 }
 
 /**
- * error_get_cd - the error message associated with the cd command in the get_cd function.
+ * error_get_cd - the error message associated with the cd command
+ * in the get_cd function.
  * @datash: relevant data.
  * Return: the printed error message.
  */
@@ -109,7 +110,8 @@ char *error_not_found(data_shell *datash)
 }
 
 /**
- * error_exit_shell - a generic error message for the exit command in the get_exit function.
+ * error_exit_shell - a generic error message for the exit command
+ * in the get_exit function.
  * @datash: relevant data (counter, arguments).
  * Return: the printed error message.
  */
