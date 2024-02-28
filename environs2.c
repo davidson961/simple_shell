@@ -1,4 +1,4 @@
-#include "main.h"
+include "main.h"
 
 /**
  * copy_info - function copies info to create new env or alias.
